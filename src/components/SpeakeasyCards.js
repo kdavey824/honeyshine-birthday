@@ -141,9 +141,9 @@ const SpeakeasyCards = () => {
             <div className="card-inner">
               <div className="card-front">
                 <div className="card-pattern"></div>
-                {!showingHint || card.id !== showingHint ? (
+                {(!showingHint || card.id !== showingHint) && !card.found && (
                   <p className="card-location">{card.location}</p>
-                ) : null}
+                )}
                 {showingHint === card.id && !card.found && (
                   <div className="hint-overlay">
                     <p>{card.hint}</p>
