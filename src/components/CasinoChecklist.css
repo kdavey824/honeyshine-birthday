@@ -1,0 +1,85 @@
+.checklist-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.checklist-container h2 {
+  color: #f1c40f;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.game-item {
+  background: rgba(44, 62, 80, 0.8);
+  border: 2px solid #f1c40f;
+  border-radius: 8px;
+  padding: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.game-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.game-name {
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.checkmark {
+  color: transparent;
+  font-size: 1.4rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.game-item.won {
+  background: #27ae60;
+  border-color: #2ecc71;
+}
+
+.game-item.won .checkmark {
+  opacity: 1;
+  color: #fff;
+}
+
+.checklist-instructions {
+  color: #f1c40f;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 480px) {
+  .games-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    padding: 0.5rem;
+  }
+
+  .game-item {
+    padding: 0.75rem;
+  }
+
+  .game-name {
+    font-size: 1rem;
+  }
+
+  .checklist-instructions {
+    font-size: 0.9rem;
+    padding: 0 1rem;
+  }
+}

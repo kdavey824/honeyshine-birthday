@@ -1,0 +1,195 @@
+.speakeasy-container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.playing-card {
+  aspect-ratio: 2.5/3.5;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  transform-origin: center center;
+}
+
+.playing-card.found .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform-origin: center center;
+  border: 8px solid #2c3e50;
+  box-sizing: border-box;
+}
+
+.card-front {
+  background: #2c3e50;
+  background-image: linear-gradient(45deg, #e74c3c 25%, transparent 25%),
+    linear-gradient(-45deg, #e74c3c 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #e74c3c 75%),
+    linear-gradient(-45deg, transparent 75%, #e74c3c 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+.card-back {
+  background: #f1c40f;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.card-back h3 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-back p {
+  margin: 0.5rem 0;
+  color: #2c3e50;
+}
+
+.found-stamp {
+  position: absolute;
+  bottom: 1rem;
+  color: #e74c3c;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transform: rotate(-15deg);
+  border: 2px solid #e74c3c;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+}
+
+.hint {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #7f8c8d;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border-top: 1px solid #bdc3c7;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+.hint-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.hint-overlay p {
+  color: #f1c40f;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0;
+}
+
+.card-location {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  margin: 0;
+  z-index: 1;
+  text-align: center;
+  width: 100%;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .speakeasy-container {
+    padding: 1rem;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+
+  .card-location {
+    font-size: 1rem;
+  }
+
+  .hint-overlay p {
+    font-size: 0.9rem;
+  }
+
+  .playing-card {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .speakeasy-container {
+    padding: 1rem;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    padding: 0.75rem;
+    margin: 0.5rem;
+  }
+
+  .card-back {
+    padding: 1rem;
+  }
+
+  .card-back h3 {
+    font-size: 1rem;
+  }
+
+  .card-back p {
+    font-size: 0.9rem;
+  }
+
+  .found-stamp {
+    font-size: 1rem;
+    padding: 0.1rem 0.3rem;
+  }
+
+  .playing-card {
+    margin-bottom: 0.75rem;
+  }
+}

@@ -1,0 +1,250 @@
+.App {
+  text-align: center;
+  background: radial-gradient(circle, #2c3e50, #000);
+  min-height: 100vh;
+  color: #f1c40f;
+  font-family: "Arial", sans-serif;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
+
+.App-header {
+  padding: 2rem 1rem;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.App-header h1 {
+  font-size: 2.5rem;
+  color: #f1c40f;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-shadow: 0 0 10px rgba(241, 196, 15, 0.5);
+}
+
+.header-subtitle {
+  color: #ecf0f1;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: 0 auto 3rem;
+  max-width: 600px;
+  opacity: 0.9;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+}
+
+.form-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  gap: 15px;
+  margin-bottom: 2rem;
+}
+
+input {
+  padding: 12px;
+  border: 2px solid #2c3e50;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #000; /* Changed from #fff to #000 */
+  min-width: 200px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+button {
+  padding: 10px 20px;
+  background: #e74c3c;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #c0392b;
+}
+
+button[type="submit"] {
+  padding: 12px 24px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background: #2980b9;
+}
+
+.table-section {
+  overflow-x: auto;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+table {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background: rgba(0, 0, 0, 0.5);
+  min-width: 300px;
+}
+
+th,
+td {
+  padding: 15px;
+  border: 1px solid #f1c40f;
+  color: #fff;
+}
+
+th {
+  background: #34495e;
+  font-weight: bold;
+}
+
+tr:hover {
+  background: rgba(52, 73, 94, 0.5);
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.actions button {
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  min-width: 60px;
+}
+
+.actions button:first-child {
+  background: #3498db;
+}
+
+.actions button:first-child:hover {
+  background: #2980b9;
+}
+
+.actions button:last-child {
+  background: #e74c3c;
+}
+
+.actions button:last-child:hover {
+  background: #c0392b;
+}
+
+/* Mobile-first approach */
+@media screen and (max-width: 768px) {
+  .form-section {
+    padding: 15px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 90%;
+  }
+
+  input {
+    padding: 10px;
+    font-size: 14px;
+    max-width: 90%;
+    width: 100%;
+    margin: 0;
+  }
+
+  button[type="submit"] {
+    max-width: 90%;
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  td,
+  th {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .actions {
+    white-space: nowrap;
+  }
+
+  .actions button {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .header-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+  }
+
+  .App-header h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .form-section {
+    padding: 10px;
+  }
+
+  input {
+    max-width: 85%;
+  }
+
+  button[type="submit"] {
+    max-width: 85%;
+  }
+
+  form {
+    width: 85%;
+  }
+}
+
+/* Adjust main content padding */
+main {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
