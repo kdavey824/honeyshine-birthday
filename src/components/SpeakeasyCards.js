@@ -52,6 +52,13 @@ const speakeasyData = [
     hint: "Hidden door near Vanderpump Cocktail Garden",
     found: false,
   },
+  {
+    id: 8,
+    name: "Ski Lodge",
+    location: "Cosmopolitan",
+    hint: "Behind a hidden door near the buffet",
+    found: false,
+  },
 ];
 
 const SpeakeasyCards = () => {
